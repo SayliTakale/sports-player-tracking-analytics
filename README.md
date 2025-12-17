@@ -35,33 +35,7 @@ This project demonstrates how raw sports videos can be transformed into **struct
 
 ---
 
-## 📂 Project Structure
 
-sports_player_tracking/
-│
-├── data/
-│ ├── input_videos/ # Input match videos (ignored in GitHub)
-│ └── outputs/ # Generated CSV analytics (ignored in GitHub)
-│
-├── detection/
-│ └── player_detection.py # Player detection
-│
-├── tracking/
-│ └── player_tracking.py # Player tracking with IDs
-│
-├── analytics/
-│ ├── player_analytics.py # Distance, speed, CSV generation
-│ ├── player_stats.py # Player statistics computation
-│ ├── team_stats.py # Team-wise statistics
-│ ├── heatmap.py # Heatmap visualization
-│ └── trajectory.py # Trajectory visualization
-│
-├── dashboard/
-│ └── app.py # Streamlit analytics dashboard
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
 
 
 
@@ -69,8 +43,39 @@ sports_player_tracking/
 
 ## ▶️ How to Run the Project (Windows)
 
+---
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/<your-username>/sports-player-tracking-analytics.git
-cd sports-player-tracking-analytics
+
+### 1️⃣ Create and Activate Virtual Environment
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+3️⃣ Add Input Video
+Place a sports video file in:
+data/input_videos/match.mp4
+Note: Input videos are intentionally ignored in GitHub and must be added locally.
+
+4️⃣ Run Player Detection 
+Detect players with bounding boxes only:
+python detection/player_detection.py
+Press ESC to close the video window.
+
+5️⃣ Run Player Tracking 
+Track players with persistent IDs:
+python tracking/player_tracking.py
+Press ESC to stop the video.
+
+6️⃣ Generate Player Analytics
+Generate CSV files required for analytics and dashboard:
+python analytics/player_analytics.py
+CSV files will be saved in:
+data/outputs/
+
+7️⃣ Launch Analytics Dashboard
+Run the Streamlit dashboard using the virtual environment:
+python -m streamlit run dashboard/app.py
+The dashboard will open automatically in your browser.
