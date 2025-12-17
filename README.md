@@ -45,8 +45,7 @@ This project demonstrates how raw sports videos can be transformed into **struct
 
 ---
 
-
-### 1️⃣ Create and Activate Virtual Environment
+1️⃣ Create and Activate Virtual Environment
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
