@@ -5,10 +5,11 @@ venv/
 __pycache__/
 *.pyc
 
-# Data files
-data/input_videos/
-data/outputs/
+# Ignore actual data files
+data/input_videos/*
+data/outputs/*
 
-# OS files
-.DS_Store
-Thumbs.db
+# But allow placeholders
+!data/input_videos/.gitkeep
+!data/outputs/.gitkeep
+!data/.gitkeep
