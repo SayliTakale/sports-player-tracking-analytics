@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data files
+data/input_videos/
+data/outputs/
+
+# OS files
+.DS_Store
+Thumbs.db
