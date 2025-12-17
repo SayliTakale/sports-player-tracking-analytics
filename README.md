@@ -67,7 +67,8 @@ sports_player_tracking/
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run the Project (Windows)
+
 
 ### 1️⃣ Clone the Repository
 ```bash
